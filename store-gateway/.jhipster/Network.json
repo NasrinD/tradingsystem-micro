@@ -1,0 +1,33 @@
+{
+    "fluentMethods": true,
+    "relationships": [
+        {
+            "relationshipType": "one-to-many",
+            "relationshipName": "acquirers",
+            "otherEntityName": "acquirer",
+            "otherEntityRelationshipName": "network"
+        },
+        {
+            "relationshipType": "one-to-many",
+            "relationshipName": "banks",
+            "otherEntityName": "bank",
+            "otherEntityRelationshipName": "network"
+        }
+    ],
+    "fields": [
+        {
+            "fieldName": "name",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        }
+    ],
+    "changelogDate": "20180921144727",
+    "entityTableName": "network",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "microserviceName": "customer"
+}
