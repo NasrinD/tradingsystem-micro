@@ -6,13 +6,19 @@
     <!--
         Added the constraints for entity CardReader.
     -->
-    <changeSet id="20180921144029-2" author="jhipster">
+    <changeSet id="20180924134957-2" author="jhipster">
         
         <addForeignKeyConstraint baseColumnNames="controller_id"
                                  baseTableName="card_reader"
                                  constraintName="fk_card_reader_controller_id"
                                  referencedColumnNames="id"
                                  referencedTableName="card_reader_controller"/>
+
+        <addForeignKeyConstraint baseColumnNames="acquirer_id"
+                                 baseTableName="card_reader"
+                                 constraintName="fk_card_reader_acquirer_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="acquirer"/>
 
     </changeSet>
 </databaseChangeLog>

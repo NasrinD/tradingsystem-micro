@@ -16,7 +16,7 @@
     <!--
         Added the entity CardReaderController.
     -->
-    <changeSet id="20180921144030-1" author="jhipster">
+    <changeSet id="20180924134958-1" author="jhipster">
         <createTable tableName="card_reader_controller">
             <column name="id" type="bigint" autoIncrement="${autoIncrement}">
                 <constraints primaryKey="true" nullable="false"/>

@@ -34,7 +34,7 @@ describe('Service Tests', () => {
 
                 const req  = httpMock.expectOne({ method: 'GET' });
 
-                const resourceUrl = SERVER_API_URL + '/customer/api/networks';
+                const resourceUrl = SERVER_API_URL + 'customer/api/networks';
                 expect(req.request.url).toEqual(resourceUrl + '/' + 123);
             });
             it('should return Network', () => {

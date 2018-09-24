@@ -29,7 +29,7 @@
             "fieldType": "Long"
         }
     ],
-    "changelogDate": "20180921144029",
+    "changelogDate": "20180924134957",
     "entityTableName": "card_reader",
     "dto": "no",
     "pagination": "no",

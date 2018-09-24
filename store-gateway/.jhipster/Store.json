@@ -27,7 +27,7 @@
             "fieldType": "Long"
         }
     ],
-    "changelogDate": "20180921144617",
+    "changelogDate": "20180924142902",
     "entityTableName": "store",
     "dto": "no",
     "pagination": "no",

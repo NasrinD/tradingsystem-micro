@@ -44,9 +44,6 @@ public class CardReaderResourceIntTest {
     private static final Long DEFAULT_CASH_DESKID = 1L;
     private static final Long UPDATED_CASH_DESKID = 2L;
 
-    private static final Long DEFAULT_ACQUIRERID = 1L;
-    private static final Long UPDATED_ACQUIRERID = 2L;
-
     @Autowired
     private CardReaderRepository cardReaderRepository;
 
@@ -86,8 +83,7 @@ public class CardReaderResourceIntTest {
     public static CardReader createEntity(EntityManager em) {
         CardReader cardReader = new CardReader()
             .model(DEFAULT_MODEL)
-            .cashDeskid(DEFAULT_CASH_DESKID)
-            .acquirerid(DEFAULT_ACQUIRERID);
+            .cashDeskid(DEFAULT_CASH_DESKID);
         return cardReader;
     }
 
@@ -113,7 +109,6 @@ public class CardReaderResourceIntTest {
         CardReader testCardReader = cardReaderList.get(cardReaderList.size() - 1);
         assertThat(testCardReader.getModel()).isEqualTo(DEFAULT_MODEL);
         assertThat(testCardReader.getCashDeskid()).isEqualTo(DEFAULT_CASH_DESKID);
-        assertThat(testCardReader.getAcquirerid()).isEqualTo(DEFAULT_ACQUIRERID);
     }
 
     @Test
@@ -165,8 +160,7 @@ public class CardReaderResourceIntTest {
             .andExpect(content().contentType(MediaType.APPLICATION_JSON_UTF8_VALUE))
             .andExpect(jsonPath("$.[*].id").value(hasItem(cardReader.getId().intValue())))
             .andExpect(jsonPath("$.[*].model").value(hasItem(DEFAULT_MODEL.toString())))
-            .andExpect(jsonPath("$.[*].cashDeskid").value(hasItem(DEFAULT_CASH_DESKID.intValue())))
-            .andExpect(jsonPath("$.[*].acquirerid").value(hasItem(DEFAULT_ACQUIRERID.intValue())));
+            .andExpect(jsonPath("$.[*].cashDeskid").value(hasItem(DEFAULT_CASH_DESKID.intValue())));
     }
 
     @Test
@@ -181,8 +175,7 @@ public class CardReaderResourceIntTest {
             .andExpect(content().contentType(MediaType.APPLICATION_JSON_UTF8_VALUE))
             .andExpect(jsonPath("$.id").value(cardReader.getId().intValue()))
             .andExpect(jsonPath("$.model").value(DEFAULT_MODEL.toString()))
-            .andExpect(jsonPath("$.cashDeskid").value(DEFAULT_CASH_DESKID.intValue()))
-            .andExpect(jsonPath("$.acquirerid").value(DEFAULT_ACQUIRERID.intValue()));
+            .andExpect(jsonPath("$.cashDeskid").value(DEFAULT_CASH_DESKID.intValue()));
     }
 
     @Test
@@ -206,8 +199,7 @@ public class CardReaderResourceIntTest {
         em.detach(updatedCardReader);
         updatedCardReader
             .model(UPDATED_MODEL)
-            .cashDeskid(UPDATED_CASH_DESKID)
-            .acquirerid(UPDATED_ACQUIRERID);
+            .cashDeskid(UPDATED_CASH_DESKID);
 
         restCardReaderMockMvc.perform(put("/api/card-readers")
             .contentType(TestUtil.APPLICATION_JSON_UTF8)
@@ -220,7 +212,6 @@ public class CardReaderResourceIntTest {
         CardReader testCardReader = cardReaderList.get(cardReaderList.size() - 1);
         assertThat(testCardReader.getModel()).isEqualTo(UPDATED_MODEL);
         assertThat(testCardReader.getCashDeskid()).isEqualTo(UPDATED_CASH_DESKID);
-        assertThat(testCardReader.getAcquirerid()).isEqualTo(UPDATED_ACQUIRERID);
     }
 
     @Test

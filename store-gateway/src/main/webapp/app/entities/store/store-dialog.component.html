@@ -30,11 +30,10 @@
         </div>
         <div class="form-group">
             <label class="form-control-label" jhiTranslate="storeApp.store.inventoryid" for="field_inventoryid">Inventoryid</label>
-            <select class="form-control" id="field_inventoryid" name="inventoryid" [(ngModel)]="store.inventoryid">
-                <option [ngValue]="null"></option>
-                <option [ngValue]="inventoryOption.id === store.inventoryid ? store.inventoryid : inventoryOption.id" *ngFor="let inventoryOption of inventories; trackBy: trackInventoryById">{{inventoryOption.id}}</option>
-            </select>
+            <input type="number" class="form-control" name="inventoryid" id="field_inventoryid"
+                [(ngModel)]="store.inventoryid" />
         </div>
+
         <div class="form-group">
             <label class="form-control-label" jhiTranslate="storeApp.store.cashDesk" for="field_cashDesk">Cash Desk</label>
             <select class="form-control" id="field_cashDesk" name="cashDesk" [(ngModel)]="store.cashDesk">

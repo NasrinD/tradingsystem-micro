@@ -34,7 +34,7 @@ describe('Service Tests', () => {
 
                 const req  = httpMock.expectOne({ method: 'GET' });
 
-                const resourceUrl = SERVER_API_URL + '/customer/api/card-reader-controllers';
+                const resourceUrl = SERVER_API_URL + 'customer/api/card-reader-controllers';
                 expect(req.request.url).toEqual(resourceUrl + '/' + 123);
             });
             it('should return CardReaderController', () => {

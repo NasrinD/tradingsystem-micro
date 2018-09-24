@@ -31,12 +31,12 @@ public class CardReader implements Serializable {
     @Column(name = "cash_deskid")
     private Long cashDeskid;
 
-    @Column(name = "acquirerid")
-    private Long acquirerid;
-
     @OneToOne
     @JoinColumn(unique = true)
     private CardReaderController controller;
+
+    @ManyToOne
+    private Acquirer acquirer;
 
     // jhipster-needle-entity-add-field - JHipster will add fields here, do not remove
     public Long getId() {
@@ -73,19 +73,6 @@ public class CardReader implements Serializable {
         this.cashDeskid = cashDeskid;
     }
 
-    public Long getAcquirerid() {
-        return acquirerid;
-    }
-
-    public CardReader acquirerid(Long acquirerid) {
-        this.acquirerid = acquirerid;
-        return this;
-    }
-
-    public void setAcquirerid(Long acquirerid) {
-        this.acquirerid = acquirerid;
-    }
-
     public CardReaderController getController() {
         return controller;
     }
@@ -97,6 +84,19 @@ public class CardReader implements Serializable {
 
     public void setController(CardReaderController cardReaderController) {
         this.controller = cardReaderController;
+    }
+
+    public Acquirer getAcquirer() {
+        return acquirer;
+    }
+
+    public CardReader acquirer(Acquirer acquirer) {
+        this.acquirer = acquirer;
+        return this;
+    }
+
+    public void setAcquirer(Acquirer acquirer) {
+        this.acquirer = acquirer;
     }
     // jhipster-needle-entity-add-getters-setters - JHipster will add getters and setters here, do not remove
 
@@ -126,7 +126,6 @@ public class CardReader implements Serializable {
             "id=" + getId() +
             ", model='" + getModel() + "'" +
             ", cashDeskid=" + getCashDeskid() +
-            ", acquirerid=" + getAcquirerid() +
             "}";
     }
 }

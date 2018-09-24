@@ -10,7 +10,7 @@
         }
     ],
     "fields": [],
-    "changelogDate": "20180921144626",
+    "changelogDate": "20180924142911",
     "entityTableName": "bar_code_scanner_controller",
     "dto": "no",
     "pagination": "no",

@@ -33,7 +33,7 @@
             "fieldType": "String"
         }
     ],
-    "changelogDate": "20180921144723",
+    "changelogDate": "20180924143017",
     "entityTableName": "bank",
     "dto": "no",
     "pagination": "no",

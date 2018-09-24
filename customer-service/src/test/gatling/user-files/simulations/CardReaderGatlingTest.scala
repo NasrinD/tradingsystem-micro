@@ -68,7 +68,7 @@ class CardReaderGatlingTest extends Simulation {
             .exec(http("Create new cardReader")
             .post("/customer/api/card-readers")
             .headers(headers_http_authenticated)
-            .body(StringBody("""{"id":null, "model":"SAMPLE_TEXT", "cashDeskid":null, "acquirerid":null}""")).asJSON
+            .body(StringBody("""{"id":null, "model":"SAMPLE_TEXT", "cashDeskid":null}""")).asJSON
             .check(status.is(201))
             .check(headerRegex("Location", "(.*)").saveAs("new_cardReader_url"))).exitHereIfFailed
             .pause(10)

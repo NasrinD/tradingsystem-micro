@@ -27,7 +27,7 @@
             "fieldType": "String"
         }
     ],
-    "changelogDate": "20180921144027",
+    "changelogDate": "20180924134955",
     "entityTableName": "acquirer",
     "dto": "no",
     "pagination": "no",

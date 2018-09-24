@@ -6,7 +6,7 @@
     <!--
         Added the constraints for entity Debit.
     -->
-    <changeSet id="20180921144026-2" author="jhipster">
+    <changeSet id="20180924134954-2" author="jhipster">
         
         <addForeignKeyConstraint baseColumnNames="owner_id"
                                  baseTableName="debit"

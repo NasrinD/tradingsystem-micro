@@ -34,7 +34,7 @@ describe('Service Tests', () => {
 
                 const req  = httpMock.expectOne({ method: 'GET' });
 
-                const resourceUrl = SERVER_API_URL + '/cashdesk/api/bar-code-scanners';
+                const resourceUrl = SERVER_API_URL + 'cashdesk/api/bar-code-scanners';
                 expect(req.request.url).toEqual(resourceUrl + '/' + 123);
             });
             it('should return BarCodeScanner', () => {

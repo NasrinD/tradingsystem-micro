@@ -34,7 +34,7 @@ describe('Service Tests', () => {
 
                 const req  = httpMock.expectOne({ method: 'GET' });
 
-                const resourceUrl = SERVER_API_URL + '/cashdesk/api/receipt-items';
+                const resourceUrl = SERVER_API_URL + 'cashdesk/api/receipt-items';
                 expect(req.request.url).toEqual(resourceUrl + '/' + 123);
             });
             it('should return ReceiptItem', () => {

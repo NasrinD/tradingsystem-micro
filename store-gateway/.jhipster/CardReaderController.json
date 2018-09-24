@@ -10,7 +10,7 @@
         }
     ],
     "fields": [],
-    "changelogDate": "20180921144729",
+    "changelogDate": "20180924143023",
     "entityTableName": "card_reader_controller",
     "dto": "no",
     "pagination": "no",

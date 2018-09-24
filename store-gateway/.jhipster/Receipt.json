@@ -42,7 +42,7 @@
             "fieldType": "Long"
         }
     ],
-    "changelogDate": "20180921144627",
+    "changelogDate": "20180924142912",
     "entityTableName": "receipt",
     "dto": "no",
     "pagination": "no",

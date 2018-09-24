@@ -18,7 +18,7 @@
             "fieldType": "Long"
         }
     ],
-    "changelogDate": "20180921144916",
+    "changelogDate": "20180924143146",
     "entityTableName": "inventory",
     "dto": "no",
     "pagination": "no",

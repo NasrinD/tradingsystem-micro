@@ -55,7 +55,7 @@
             "fieldType": "Long"
         }
     ],
-    "changelogDate": "20180921144618",
+    "changelogDate": "20180924142903",
     "entityTableName": "cash_desk",
     "dto": "no",
     "pagination": "no",
