@@ -10,6 +10,7 @@ import { Store } from './store.model';
 import { StorePopupService } from './store-popup.service';
 import { StoreService } from './store.service';
 import { CashDesk, CashDeskService } from '../cash-desk';
+import { Inventory, InventoryService } from '../inventory';
 
 @Component({
     selector: 'jhi-store-dialog',
@@ -22,11 +23,14 @@ export class StoreDialogComponent implements OnInit {
 
     cashdesks: CashDesk[];
 
+    inventories: Inventory[];
+
     constructor(
         public activeModal: NgbActiveModal,
         private jhiAlertService: JhiAlertService,
         private storeService: StoreService,
         private cashDeskService: CashDeskService,
+        private inventoryService: InventoryService,
         private eventManager: JhiEventManager
     ) {
     }
@@ -44,6 +48,20 @@ export class StoreDialogComponent implements OnInit {
                         .subscribe((subRes: HttpResponse<CashDesk>) => {
                             this.cashdesks = [subRes.body].concat(res.body);
                         }, (subRes: HttpErrorResponse) => this.onError(subRes.message));
+                }
+            }, (res: HttpErrorResponse) => this.onError(res.message));
+        this.inventoryService
+            .query({filter: 'store(name)-is-null'})
+            .subscribe((res: HttpResponse<Inventory[]>) => {
+                if (!this.store.inventoryid) {
+                    this.inventories = res.body;
+                } else {
+                    this.inventoryService
+                        .find(this.store.inventoryid)
+                        .subscribe((subRes: HttpResponse<Inventory>) => {
+                            this.inventories = [subRes.body].concat(res.body);
+                        }, (subRes: HttpErrorResponse) =>
+                        this.onError(subRes.message));
                 }
             }, (res: HttpErrorResponse) => this.onError(res.message));
     }
@@ -83,6 +101,10 @@ export class StoreDialogComponent implements OnInit {
     }
 
     trackCashDeskById(index: number, item: CashDesk) {
+        return item.id;
+    }
+
+    trackInventoryById(index: number, item: Inventory) {
         return item.id;
     }
 }
