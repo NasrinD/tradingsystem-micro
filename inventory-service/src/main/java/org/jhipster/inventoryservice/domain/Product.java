@@ -1,6 +1,6 @@
 package org.jhipster.inventoryservice.domain;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import org.hibernate.annotations.Cache;
 import org.hibernate.annotations.CacheConcurrencyStrategy;
 
@@ -39,7 +39,7 @@ public class Product implements Serializable {
     private BigDecimal purchasePrice;
 
     @OneToOne(mappedBy = "product")
-    @JsonIgnore
+    @JsonIgnoreProperties("product")
     private StockItem stockItem;
 
     // jhipster-needle-entity-add-field - JHipster will add fields here, do not remove
