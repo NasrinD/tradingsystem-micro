@@ -1,9 +1,0 @@
-{
-    "storeApp": {
-        "PaymentMode" : {
-            "null": "",
-            "CASH": "CASH",
-            "CARD": "CARD"
-        }
-    }
-}

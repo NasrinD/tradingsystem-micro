@@ -5,18 +5,6 @@
     xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.5.xsd">
 
     <include file="config/liquibase/changelog/00000000000000_initial_schema.xml" relativeToChangelogFile="false"/>
-    <include file="config/liquibase/changelog/20180924134952_added_entity_Bank.xml" relativeToChangelogFile="false"/>
-    <include file="config/liquibase/changelog/20180924134953_added_entity_Customer.xml" relativeToChangelogFile="false"/>
-    <include file="config/liquibase/changelog/20180924134954_added_entity_Debit.xml" relativeToChangelogFile="false"/>
-    <include file="config/liquibase/changelog/20180924134955_added_entity_Acquirer.xml" relativeToChangelogFile="false"/>
-    <include file="config/liquibase/changelog/20180924134956_added_entity_Network.xml" relativeToChangelogFile="false"/>
-    <include file="config/liquibase/changelog/20180924134957_added_entity_CardReader.xml" relativeToChangelogFile="false"/>
-    <include file="config/liquibase/changelog/20180924134958_added_entity_CardReaderController.xml" relativeToChangelogFile="false"/>
     <!-- jhipster-needle-liquibase-add-changelog - JHipster will add liquibase changelogs here -->
-    <include file="config/liquibase/changelog/20180924134952_added_entity_constraints_Bank.xml" relativeToChangelogFile="false"/>
-    <include file="config/liquibase/changelog/20180924134953_added_entity_constraints_Customer.xml" relativeToChangelogFile="false"/>
-    <include file="config/liquibase/changelog/20180924134954_added_entity_constraints_Debit.xml" relativeToChangelogFile="false"/>
-    <include file="config/liquibase/changelog/20180924134955_added_entity_constraints_Acquirer.xml" relativeToChangelogFile="false"/>
-    <include file="config/liquibase/changelog/20180924134957_added_entity_constraints_CardReader.xml" relativeToChangelogFile="false"/>
     <!-- jhipster-needle-liquibase-add-constraints-changelog - JHipster will add liquibase constraints changelogs here -->
 </databaseChangeLog>
