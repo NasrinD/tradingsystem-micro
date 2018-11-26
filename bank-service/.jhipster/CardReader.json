@@ -1,0 +1,35 @@
+{
+    "fluentMethods": true,
+    "relationships": [
+        {
+            "relationshipType": "one-to-one",
+            "relationshipName": "controller",
+            "otherEntityName": "cardReaderController",
+            "otherEntityField": "id",
+            "ownerSide": true,
+            "otherEntityRelationshipName": "cardReader"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "relationshipName": "acquiringBank",
+            "otherEntityName": "acquiringBank",
+            "otherEntityField": "id"
+        }
+    ],
+    "fields": [
+        {
+            "fieldName": "model",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        }
+    ],
+    "changelogDate": "20181105201652",
+    "entityTableName": "card_reader",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "microserviceName": "bank"
+}

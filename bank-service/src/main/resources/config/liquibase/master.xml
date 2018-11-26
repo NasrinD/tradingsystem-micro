@@ -5,6 +5,16 @@
     xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.5.xsd">
 
     <include file="config/liquibase/changelog/00000000000000_initial_schema.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20181105201648_added_entity_IssuingBank.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20181105201649_added_entity_Debit.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20181105201650_added_entity_AcquiringBank.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20181105201651_added_entity_Network.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20181105201652_added_entity_CardReader.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20181105201653_added_entity_CardReaderController.xml" relativeToChangelogFile="false"/>
     <!-- jhipster-needle-liquibase-add-changelog - JHipster will add liquibase changelogs here -->
+    <include file="config/liquibase/changelog/20181105201648_added_entity_constraints_IssuingBank.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20181105201649_added_entity_constraints_Debit.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20181105201650_added_entity_constraints_AcquiringBank.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20181105201652_added_entity_constraints_CardReader.xml" relativeToChangelogFile="false"/>
     <!-- jhipster-needle-liquibase-add-constraints-changelog - JHipster will add liquibase constraints changelogs here -->
 </databaseChangeLog>
